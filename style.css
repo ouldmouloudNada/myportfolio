@@ -39,7 +39,7 @@ html::-webkit-scrollbar-thumb{
     left:0;
     width: 100%;
     z-index: 100;
-    padding: 2rem 9%;
+    padding: 3rem 9%;
     background: rgba(0, 0, 0, 0.7);
     filter : drop-shadow(10px);
     display: flex;
@@ -47,13 +47,12 @@ html::-webkit-scrollbar-thumb{
     align-items: center;
 
 }
-.logo img{
-    /* font-size: 3rem;
+.logo{
+    font-size: 3rem;
     color:var(--main-color);
     font-weight: 800;
     cursor: pointer;
-    transition: 0.5s ease; */
-    width: 100px;
+    transition: 0.5s ease;
 }
 .logo:hover{
     transform: scale(1.1);
@@ -85,8 +84,8 @@ html::-webkit-scrollbar-thumb{
         top: 100%;
         right: 0;
         width: 40%;
-        border-left:3px solid var (--main-color);
-        border-bottom: 3px solid var (--main-color);
+        border-left:3px solid var(--main-color);
+        border-bottom: 3px solid var(--main-color);
         border-bottom-left-radius: 2rem;
         padding: 1rem 3%;
         background-color: var(--second-bg-color);
@@ -333,7 +332,11 @@ animation: words 20s infinite;
         margin-bottom: 3rem;
     }
     .services-container{
-        grid-template-columns:repeat(1.1fr);
+        grid-template-columns: repeat(1, 1fr);
+        margin: 1rem;
+        padding: 2rem 0.2rem 2rem 0.2rem;
+        gap:1rem;
+       
     }
 }
 .btn1{
@@ -564,26 +567,26 @@ animation: words 20s infinite;
     }
 }
 /*contact*/
-.contact {
+/* .contact {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    flex-direction: column; /* Ensure elements are stacked vertically */
-    min-height: 100vh; /* Optional: Set minimum height to full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
 .contact h2 {
     margin-bottom: 3rem;
     color: #fff;
-    text-align: center; /* Center the heading text */
+    text-align: center;
 }
 
 .contact form {
     max-width: 70rem;
-    margin: auto; /* Center the form horizontally */
+    margin: auto; 
     margin-bottom: 3rem;
     text-align: center;
-    width: 100%; /* Ensure the form takes up full width of its container */
+    width: 100%; 
 }
 
 .contact form .input-box {
@@ -607,7 +610,7 @@ animation: words 20s infinite;
 
 .contact form .btn {
     margin-top: 2rem;
-}
+} */
 /*footer*/
 .footer{
     position: relative;
@@ -616,24 +619,11 @@ animation: words 20s infinite;
     padding: 40px 0;
     background-color: var(--main-color);
 }
-.footer .social{
-    text-align: center;
-    padding-bottom: 25px;
-    color: #000;
+
+.footer .attribution a{
+    text-decoration: none;
+    font-weight:700;
 }
-.footer .social i{
-    font-size: 25px;
-    color: #000;
-    border: 2px solid black;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 10px;
-    transition: 0.3s ease;
-} 
 .attribution{
     position: absolute;
     bottom: 0;
@@ -644,25 +634,93 @@ animation: words 20s infinite;
     color: #fff;
     font-size: 2rem;
 }
+
+
+/*project*/
 .project{
     padding: 20px;
 }
 .project-box {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: 5px;
-   
+    
 }
 .project-box .btn1{
-    width: 24%;
+    width: 25%;
 }
-.project-box img{
-    box-shadow: 0 0 25px var(--main-color);
+.project-box .departementimg{
+   /*  box-shadow: 0 0 25px var(--main-color); */
     cursor: pointer;
     width: 500px;
+    height: 38vh;
 }
 .project-box img:hover{
     transform: scale(1.01);
     filter:drop-shadow(0 0 25px var(--main-color));
+}
+.project-box .cofeeimg{
+    
+    width: 500px;
+    cursor: pointer;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+.project-box .login{
+    width: 500px;
+    cursor: pointer;
+    height: 50vh;
+}
+@media screen and (max-width:600px){
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+        flex-wrap: wrap;
+        gap: 1.8rem;
+    }
+    .project-box .btn1{
+       width: 50%;
+       margin-left: -5px;
+    }
+    .project-box .departementimg{
+        
+         width: 350px;
+         
+     }
+     .project-box .cofeeimg{
+    
+        width: 350px;
+        height: 30vh;
+        
+    }
+    .project-box .login{
+        width: 350px;
+        height: 40vh;
+    }
+}
+/* @media(max-width:1285px){
+    html{
+        font-size: 55%;
+
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+
+} */
+@media(max-width:991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    .section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    
 }
