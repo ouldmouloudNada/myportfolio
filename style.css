@@ -88,12 +88,12 @@ html::-webkit-scrollbar-thumb{
         border-bottom: 3px solid var(--main-color);
         border-bottom-left-radius: 2rem;
         padding: 1rem 3%;
-        background-color: var(--second-bg-color);
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.4);
+        background-color: #161616ce;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.4); 
         display: none;
     }
     .navbar.active {
-        display: block;
+        display: block; 
     }
     .navbar a{
         display: block;
@@ -397,7 +397,6 @@ animation: words 20s infinite;
 }
 .skills .container .bar .info{
     display: flex;
-    
     align-items: center;
     flex-direction: column;
     gap: 1rem;
@@ -414,6 +413,7 @@ animation: words 20s infinite;
     font-size: 3rem;
     color: #fff;
 }
+
 @media screen and (max-width:600px){
     .skills .container{
         margin: 0;
